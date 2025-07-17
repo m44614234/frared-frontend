@@ -7,7 +7,6 @@ import ProductSwiper from "../templates/ProductSwiper";
 import { useRef } from "react";
 import {
   GiftOutlined,
-  LeftCircleOutlined,
   LeftOutlined,
   RightOutlined,
 } from "@ant-design/icons";

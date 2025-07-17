@@ -1,6 +1,5 @@
 "use client";
 import UserLayout from "@/components/layouts/UserPanelLayout";
-import ProductCard from "@/components/templates/ProductCard";
 import { useProduct } from "@/context/ProductContext";
 import { DeleteFilled, DeleteOutlined } from "@ant-design/icons";
 import Link from "next/link";

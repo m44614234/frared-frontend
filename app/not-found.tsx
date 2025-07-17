@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import ErrorImage from "../public/images/error.svg";
 
 export default function Error() {
   return (

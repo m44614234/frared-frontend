@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import React, { use, useEffect, useState } from "react";
+import React from "react";
 import Titles from "../templates/Titles";
 
 const Categories = ({ pCategories }: any) => {

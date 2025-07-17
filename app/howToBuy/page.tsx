@@ -1,6 +1,5 @@
 // components/OrderPage.js
 import { CheckOutlined } from "@ant-design/icons";
-import { title } from "process";
 import React from "react";
 
 const HowToBuy = () => {

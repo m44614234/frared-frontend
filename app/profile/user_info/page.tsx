@@ -1,7 +1,6 @@
 "use client";
 import UserLayout from "@/components/layouts/UserPanelLayout";
 import { useUser } from "@/context/UserContext";
-import { baseUrl } from "@/utils/baseUrl";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { toast } from "react-toastify";

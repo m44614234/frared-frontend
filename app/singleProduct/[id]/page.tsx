@@ -1,28 +1,9 @@
 "use client";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Meta from "@/components/templates/Meta";
-import {
-  CommentOutlined,
-  GiftOutlined,
-  HeartFilled,
-  HeartOutlined,
-  LeftOutlined,
-  ShopOutlined,
-  TruckOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import ReactStars from "react-stars";
+import { useState } from "react";
 import { toast } from "react-toastify";
-import { Tabs } from "antd";
-import TabPane from "antd/es/tabs/TabPane";
-// import FeaturedCollection from "@/components/FeaturedCollection/Featured-Collection";
 import { useUser } from "@/context/UserContext";
 import { useProduct } from "@/context/ProductContext";
 import useSWR from "swr";
@@ -115,9 +96,7 @@ const singleProduct = ({ params }: SingleProductProps) => {
   const commentLength: any = comments
     ? comments.filter((item: any) => item.product === id).length
     : 0;
-  
-    
-    
+
   const productColors = productState?.color;
 
   // Share Button

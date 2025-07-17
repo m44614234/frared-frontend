@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ClockCircleOutlined,
-  CommentOutlined,
   EyeOutlined,
   FolderOutlined,
   LeftOutlined,
@@ -13,7 +12,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ReactStars from "react-stars";
 import { useBlog } from "@/context/BlogContext";
 import { useUser } from "@/context/UserContext";
 import { baseUrl } from "@/utils/baseUrl";

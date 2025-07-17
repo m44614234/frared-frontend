@@ -9,7 +9,6 @@ import { UserProvider } from "@/context/UserContext";
 import { ProductProvider } from "@/context/ProductContext";
 import { ToastContainer } from "react-toastify";
 import { BlogProvider } from "@/context/BlogContext";
-import { useEffect } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

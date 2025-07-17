@@ -2,8 +2,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Meta from "@/components/templates/Meta";
-import BreadCrumb from "@/components/templates/BreadCrumb";
 import {
   HomeFilled,
   InfoCircleFilled,

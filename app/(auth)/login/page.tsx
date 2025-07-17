@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import CustomInput from "@/components/templates/CustomInput";
 import { EyeInvisibleOutlined } from "@ant-design/icons";
 import { useUser } from "@/context/UserContext";
-import { useRouter } from "next/router";
 
 const Login = () => {
   const { setUser, user, handleLogin } = useUser();

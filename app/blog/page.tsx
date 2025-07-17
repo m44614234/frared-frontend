@@ -4,11 +4,8 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useEffect, useRef, useState } from "react";
-import Meta from "@/components/templates/Meta";
-import BreadCrumb from "@/components/templates/BreadCrumb";
 import { baseUrl } from "@/utils/baseUrl";
 import { useBlog } from "@/context/BlogContext";
-import Container from "@/components/templates/Container";
 import useSWR from "swr";
 import {
   BookOutlined,

@@ -2,7 +2,6 @@
 
 import { useUser } from "@/context/UserContext";
 import Link from "next/link";
-import { useState } from "react";
 
 const UserLayout = ({ children }: any) => {
   const { user, handleLogout } = useUser();

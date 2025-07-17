@@ -3,10 +3,10 @@ import BreadCrumb from "@/components/templates/BreadCrumb";
 import Meta from "@/components/templates/Meta";
 import { useProduct } from "@/context/ProductContext";
 import { useUser } from "@/context/UserContext";
-import { CloseOutlined, DeleteFilled } from "@ant-design/icons";
+import { CloseOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ReactStars from "react-stars";
 
 const Wishlist = () => {
