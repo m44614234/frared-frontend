@@ -24,7 +24,12 @@ export const BlogProvider = ({ children }: any) => {
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
-        const response = await fetch(`${baseUrl}/blog`);
+        const response = await fetch(`${baseUrl}/blog`,{
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const data = await response.json();
         setBlog(data);
         setLoading(false);
@@ -82,7 +87,12 @@ export const BlogProvider = ({ children }: any) => {
 
   const getABlog = async (id: any) => {
     try {
-      const response = await fetch(`${baseUrl}/blog/${id}`);
+      const response = await fetch(`${baseUrl}/blog/${id}`,{
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       const data = await response.json();
       return data;
     } catch (error) {

@@ -37,7 +37,12 @@ export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const getAllProducts = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/product`);
+      const response = await axios.get(`${baseUrl}/product`,{
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       setProducts(response.data);
     } catch (error) {
       console.error("Failed to fetch products:", error);
@@ -50,7 +55,12 @@ export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({
    // Start Product Comments // 
    const getComments = async () => {
     try {
-      const response : any = await axios.get(`${baseUrl}/productComment`);
+      const response : any = await axios.get(`${baseUrl}/productComment`,{
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       setProdComments(response.data);
     } catch (error) {
       console.log("error =>", error);

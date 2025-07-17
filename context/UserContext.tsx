@@ -81,7 +81,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     e.preventDefault();
 
     try {
-      const response: any = await axios.post(`${baseUrl}/auth/loginUser`, user);
+      const response: any = await axios.post(`${baseUrl}/auth/loginUser`, user,{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.data || response.status === 200) {
         setUser({ email: "", password: "" }); // پاک کردن مقادیر ورودی
@@ -318,7 +323,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     getUser();
     const getOrder = async () => {
       try {
-        const res = await fetch(`${baseUrl}/order`);
+        const res = await fetch(`${baseUrl}/order` ,{
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const data = await res.json();
         setOrder(data);
         setLoading(false)
