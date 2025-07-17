@@ -11,7 +11,7 @@ const nextConfig = {
         },
          {
         protocol: "https",
-        hostname: "fared-backend.vercel.app",
+        hostname: "fared-backend-production.up.railway.app",
       },
       {
         protocol: "http",
@@ -26,7 +26,7 @@ const nextConfig = {
             headers: [
               {
                 key: "Access-Control-Allow-Origin",
-                value: "https://fared-backend.vercel.app", // یا * برای همه دامنه‌ها
+                value: "https://fared-backend-production.up.railway.app", // یا * برای همه دامنه‌ها
               },
               {
                 key: "Access-Control-Allow-Methods",

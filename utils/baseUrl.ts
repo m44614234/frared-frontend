@@ -1,2 +1,2 @@
 
-export const baseUrl = "https://fared-backend.vercel.app/api";
+export const baseUrl = "https://fared-backend-production.up.railway.app/api";
