@@ -55,6 +55,7 @@ const Profile_Order = () => {
                         {item && (item?.paymentData?.price_amount).toLocaleString("fa-IR")} تومان
                       </p>
                     </td>
+                    
                     <td className="p-3 border-b">
                       <p className="text-yellow-500">{item?.orderStatus}</p>
                     </td>
