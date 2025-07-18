@@ -26,7 +26,7 @@ const Login = () => {
         className="w-full grid grid-cols-1 justify-center md:grid-cols-2"
       >
         <section className="hidden w-full md:flex justify-center">
-        <img src="./assets/image/ba`nner2.jpg" className="w-full h-full" alt="login" />
+        <img src="./assets/image/banner2.jpg" className="w-full h-full" alt="login" />
         </section>
 
         <section className="flex relative flex-col  justify-center w-full ">

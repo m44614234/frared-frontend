@@ -38,7 +38,7 @@ const Profile_Order = () => {
                 </tr>
               </thead>
               <tbody>
-                {myOrder.map((item: any) => (
+                {myOrder && myOrder?.map((item: any) => (
                   <tr key={item?._id} className="hover:bg-zinc-100 text-xs md:text-sm">
                     <td className="px-3 py-4 border-b">
                       <p className="text-zinc-700">
@@ -47,12 +47,12 @@ const Profile_Order = () => {
                     </td>
                     <td className="p-3 border-b">
                       <p className="text-zinc-700">
-                        {new Date(item?.createdAt).toLocaleDateString("fa-IR")}
+                        {item?.createdAt && new Date(item?.createdAt).toLocaleDateString("fa-IR")}
                       </p>
                     </td>
                     <td className="p-3 border-b">
                       <p className="text-zinc-700">
-                        {(item?.totalPrice).toLocaleString("fa-IR")} تومان
+                        {item && (item?.paymentData?.price_amount).toLocaleString("fa-IR")} تومان
                       </p>
                     </td>
                     <td className="p-3 border-b">

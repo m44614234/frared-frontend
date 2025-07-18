@@ -6,7 +6,7 @@ import { useUser } from "@/context/UserContext";
 import UserLayout from "@/components/layouts/UserPanelLayout";
 
 const Profile = () => {
-  const { user: userData , order, loading } = useUser();
+  const { user: userData, order, loading } = useUser();
 
   const path = usePathname();
   const router = useRouter();
@@ -18,14 +18,15 @@ const Profile = () => {
     );
   }
 
-  const myOrder = order && order.filter(
-    (item: any) => item?.user?._id === userData?._id
-  );
+  const myOrder =
+    order && order.filter((item: any) => item?.user?._id === userData?._id);
 
   if (path.startsWith("/profile") && !userData.username) {
     router.replace("/");
   }
 
+  console.log("Total Profile Orders:", myOrder);
+  
   return (
     <UserLayout>
       <main dir="rtl" className="w-full mx-auto px-3 ">
@@ -48,7 +49,9 @@ const Profile = () => {
               </svg>
               <div className="text-zinc-100 space-y-1">
                 <div>سفارشات کل</div>
-                <div>{myOrder.length.toLocaleString("fa-IR")}</div>
+                <div>
+                  {myOrder && myOrder.length.toLocaleString("fa-IR") }
+                </div>
               </div>
             </div>
             <div className="flex md:w-1/4 gap-x-2 items-center bg-blue-500 rounded-2xl px-3 py-2 text-xs sm:text-base">
@@ -68,7 +71,13 @@ const Profile = () => {
               </svg>
               <div className="text-zinc-100 space-y-1">
                 <div>تحویل داده شده</div>
-                <div>{myOrder?.filter((item: any) => item.orderStatus === "تحویل داده شده").length.toLocaleString("fa-IR")}</div>
+                <div>
+                  {myOrder && myOrder
+                    ?.filter(
+                      (item: any) => item.orderStatus === "تحویل داده شده"
+                    )
+                    .length.toLocaleString("fa-IR")}
+                </div>
               </div>
             </div>
           </div>
@@ -101,7 +110,7 @@ const Profile = () => {
                 </tr>
               </thead>
               <tbody>
-                {myOrder.map((item: any) => (
+                {myOrder && myOrder?.map((item: any) => (
                   <tr className="hover:bg-zinc-100 text-xs md:text-sm">
                     <td className="px-3 py-4 border-b">
                       <p className="text-zinc-700">
@@ -110,12 +119,12 @@ const Profile = () => {
                     </td>
                     <td className="p-3 border-b">
                       <p className="text-zinc-700">
-                        {new Date(item?.createdAt).toLocaleDateString("fa-IR")}
+                        {item?.createdAt && new Date(item?.createdAt).toLocaleDateString("fa-IR")}
                       </p>
                     </td>
                     <td className="p-3 border-b">
                       <p className="text-zinc-700">
-                        {(item?.totalPrice).toLocaleString("fa-IR")} تومان
+                        {item && (item?.paymentData?.price_amount).toLocaleString("fa-IR")} تومان
                       </p>
                     </td>
                     <td className="p-3 border-b">
@@ -133,4 +142,3 @@ const Profile = () => {
 };
 
 export default Profile;
-

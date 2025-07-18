@@ -81,7 +81,7 @@ const Profile_Favorites = () => {
                           src={
                             singleImage
                               ? singleImage[0]
-                              : "../assets/image/products/91.jpg"
+                              : "https://via.placeholder.com/150"
                           }
                           alt=""
                         />
