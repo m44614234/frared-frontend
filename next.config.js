@@ -1,22 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // images: {
-    //     domains: ['picsum.photos' , 'res.cloudinary.com'],
-    //   },
     images: {
       remotePatterns: [
         {
           protocol: 'https',
           hostname: 'res.cloudinary.com',
         },
-         {
-        protocol: "https",
-        hostname: "fared-backend-production.up.railway.app",
-      },
-      {
-        protocol: "http",
-        hostname: "localhost",
-      },
+        {
+          protocol: "https",
+          hostname: "fared-backend-production.up.railway.app",
+        },
+        {
+          protocol: "http",
+          hostname: "localhost",
+        },
       ]
     },
     async headers() {
@@ -26,7 +23,7 @@ const nextConfig = {
             headers: [
               {
                 key: "Access-Control-Allow-Origin",
-                value: "https://fared-backend-production.up.railway.app", // یا * برای همه دامنه‌ها
+                value: "*", // یا آدرس خاصی که نیاز دارید
               },
               {
                 key: "Access-Control-Allow-Methods",
@@ -39,7 +36,7 @@ const nextConfig = {
             ],
           },
         ];
-      },
+    },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
